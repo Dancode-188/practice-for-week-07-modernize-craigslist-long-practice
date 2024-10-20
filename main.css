@@ -31,3 +31,120 @@ p.more {
 }
 
 /* Your code here */
+* {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  background-color: #F5F5F5;
+  color: #464646;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+ul > li {
+  list-style: none;
+}
+
+/* Phase 2: Style hovered-on and visited links */
+a:visited {
+  color: #800080;
+}
+
+a:hover,
+a:hover > span {
+  font-weight: bold;
+  color: #800080;
+}
+
+/* Phase 3: Style the main page sections */
+.page-container {
+  max-width: 1200px;
+}
+
+#leftbar,
+#center,
+#rightbar {
+  float: left;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+footer {
+  clear: both;
+}
+
+#leftbar,
+#rightbar {
+  width: 25%;
+}
+
+#center {
+  width: 50%;
+  border: 1px solid #464646;
+  border-radius: 10px;
+}
+
+#center > div {
+  float: left;
+  width: 33%;
+}
+
+#topban h2 {
+  text-align: center;
+}
+
+/* Phase 4: Style the footer list */
+ul.clfooter {
+  text-align: center;
+  border-top: 1px solid gray;
+  padding: 10px 0;
+}
+
+ul.clfooter > li {
+  display: inline;
+  padding-right: 5px;
+}
+
+/* Phase 5: Add pseudo-elements */
+h4.ban::before {
+  content: "☮️";
+  margin-right: 5px;
+}
+
+/* Bonus: Style the calendar */
+.cal {
+  border-collapse: collapse;
+}
+
+.cal td {
+  border: 1px solid #333;
+  text-align: center;
+}
+
+.cal a {
+  color: #464646;
+  font-weight: bold;
+}
+
+.cal td:not(:has(a)) {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: not-allowed;
+}
+
+.cal td.today {
+  background-color: darkviolet;
+  color: white;
+}
+
+.cal td:hover {
+  background-color: lavender;
+}
+
+/* Bonus: Use more pseudo-classes */
+input:focus {
+  outline: 2px solid #800080;
+}
